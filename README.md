@@ -1,4 +1,4 @@
-# [Your Name] - Data Analysis Portfolio
+# Burhanuddin Irsyad - Data Scientist Portfolio
 
 Welcome! This repository contains the complete template for a professional, one-page data analysis portfolio website, hosted for free on GitHub Pages.
 
@@ -42,8 +42,8 @@ Click the green **"Use this template"** button at the top of this repository pag
 
 ### 2. Name Your Repository for GitHub Pages
 This is the most important step. To turn your portfolio into a live website, you **must** name your new repository in the following format:
-`your-username.github.io`
-*(Replace `your-username` with your actual GitHub username.)*
+`burhanirsyad.github.i`
+*(Replace `burhanirsyad` with your actual GitHub username.)*
 
 ### 3. Customize Your Portfolio
 Open the `index.html` file and begin personalizing it. The file contains helpful `<!--💡UPDATE: ... -->` comments to guide you on where to change:
@@ -58,4 +58,4 @@ Open the `index.html` file and begin personalizing it. The file contains helpful
 - Upload your CV (e.g., in PDF format) to the `assets/` folder.
 - Create your favicon and add it to the root folder.
 
-Once you commit your changes, your new portfolio website will be live at `https://your-username.github.io` within a few minutes!
+Once you commit your changes, your new portfolio website will be live at `burhanirsyad.github.io` within a few minutes!
