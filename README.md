@@ -42,7 +42,7 @@ Click the green **"Use this template"** button at the top of this repository pag
 
 ### 2. Name Your Repository for GitHub Pages
 This is the most important step. To turn your portfolio into a live website, you **must** name your new repository in the following format:
-`burhanirsyad.github.i`
+`burhanirsyad.github.io`
 *(Replace `burhanirsyad` with your actual GitHub username.)*
 
 ### 3. Customize Your Portfolio
