@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta property="og:title" content="Burhanuddin Irsyad | Data Scientist Portfolio">
+    <meta property="og:description" content="Data Scientist | Data Engineer | Machine Learning Engineer">
+    <meta property="og:image" content="https://burhanirsyad.github.io/logo.png">
+    <meta property="og:url" content="https://burhanirsyad.github.io">
+    <meta property="og:type" content="website">
+
+    <title>Burhan Irsyad | Data Scientist Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="apple-touch-icon" href="/logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* ===== RESET & BASE STYLES ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background-color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section { padding: 80px 0; }
+
+        h1, h2, h3, h4 { font-weight: 600; line-height: 1.2; }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+            color: #0066cc;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #0066cc;
+            border-radius: 2px;
+        }
+
+        p { margin-bottom: 1rem; color: #424245; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(135deg, #0066cc 0%, #004d99 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+            position: relative;
+            z-index: 1;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-links a:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            background-color: #f5f5f7;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid #e5e5e7;
+        }
+
+        nav .container { display: flex; justify-content: center; }
+        nav ul { display: flex; gap: 0; }
+        nav li { margin: 0; }
+
+        nav a {
+            display: block;
+            padding: 20px 25px;
+            font-weight: 500;
+            color: #424245;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #0066cc;
+            background-color: rgba(0, 102, 204, 0.05);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background-color: #0066cc;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after { width: 70%; }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .profile-photo {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.15);
+            border: 1px solid rgba(0, 102, 204, 0.1);
+        }
+
+        .about-text { flex: 1; }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .about-meta {
+            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 12px;
+            border: 1px solid #e5e5e7;
+            border-radius: 12px;
+            background: #fafafa;
+            color: #424245;
+            font-size: 0.95rem;
+        }
+
+        .chip i { color: #0066cc; }
+
+        /* ===== EXPERIENCE SECTION ===== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #e5e5e7;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 102, 204, 0.15);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #e5e5e7;
+        }
+
+        .project-card-content { padding: 25px; }
+
+        .project-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            color: #6e6e73;
+        }
+
+        .project-highlights {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .project-highlights li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f7f7f7;
+            font-size: 0.98rem;
+            color: #424245;
+            position: relative;
+            padding-left: 18px;
+        }
+
+        .project-highlights li:last-child { border-bottom: none; }
+
+        .project-highlights li::before {
+            content: "•";
+            color: #0066cc;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* ===== SKILLS SECTION ===== */
+        .skills-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .skill-column {
+            background-color: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e5e5e7;
+            transition: all 0.3s ease;
+        }
+
+        .skill-column:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 102, 204, 0.1);
+        }
+
+        .skill-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .skill-header i {
+            font-size: 2rem;
+            color: #0066cc;
+            background-color: rgba(0, 102, 204, 0.1);
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill-header h3 {
+            font-size: 1.5rem;
+            color: #1d1d1f;
+        }
+
+        .skill-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 1.05rem;
+            color: #424245;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .skill-list li:last-child { border-bottom: none; }
+
+        .skill-list li::before {
+            content: "•";
+            color: #0066cc;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* ===== CERTIFICATIONS SECTION ===== */
+        .cert-wrapper { max-width: 1000px; margin: 0 auto; }
+
+        .cert-card {
+            background: #ffffff;
+            border: 1px solid #e5e5e7;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .cert-note {
+            text-align: center;
+            color: #6e6e73;
+            margin: -10px 0 24px;
+            font-size: 1.02rem;
+        }
+
+        .cert-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+
+        .cert-item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .cert-item:last-child { border-bottom: none; }
+
+        .cert-left {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .cert-bullet {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 102, 204, 0.1);
+            color: #0066cc;
+            flex: 0 0 auto;
+            margin-top: 2px;
+        }
+
+        .cert-title {
+            font-size: 1.05rem;
+            color: #1d1d1f;
+            margin: 0;
+            font-weight: 600;
+            white-space: normal;
+        }
+
+        .cert-org {
+            font-size: 0.95rem;
+            color: #6e6e73;
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+
+        .cert-date {
+            flex: 0 0 auto;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #0066cc;
+            background: rgba(0, 102, 204, 0.08);
+            padding: 8px 10px;
+            border-radius: 10px;
+            white-space: nowrap;
+            height: fit-content;
+        }
+
+        @media (max-width: 640px) {
+            .cert-item { flex-direction: column; }
+            .cert-date { align-self: flex-start; }
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-cards {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            border: 1px solid #e5e5e7;
+            border-radius: 16px;
+            padding: 22px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 25px rgba(0, 102, 204, 0.12);
+        }
+
+        .contact-card .icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 102, 204, 0.1);
+            color: #0066cc;
+            font-size: 1.4rem;
+            margin-bottom: 14px;
+        }
+
+        .contact-card h3 { font-size: 1.25rem; margin-bottom: 8px; color: #1d1d1f; }
+
+        .contact-card p { color: #6e6e73; margin-bottom: 14px; font-size: 0.98rem; }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            background: #0066cc;
+            color: #ffffff;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover { background: #004d99; transform: translateY(-2px); }
+
+        .contact-btn.secondary {
+            background: transparent;
+            color: #0066cc;
+            border: 1px solid #0066cc;
+        }
+
+        .contact-btn.secondary:hover { background: rgba(0, 102, 204, 0.05); }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #f5f5f7;
+            color: #6e6e73;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #e5e5e7;
+        }
+
+        footer p { margin-bottom: 0; font-size: 0.95rem; }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 992px) {
+            .about-content { flex-direction: column; text-align: center; gap: 40px; }
+            .profile-photo { width: 250px; height: 250px; }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2.2rem; }
+            .section { padding: 60px 0; }
+            nav ul { flex-wrap: wrap; justify-content: center; }
+            nav a { padding: 15px 20px; font-size: 0.95rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .skills-table { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            header h1 { font-size: 2.2rem; }
+            header p { font-size: 1.1rem; }
+            h2 { font-size: 1.8rem; }
+            .social-links { gap: 15px; }
+            .social-links a { width: 45px; height: 45px; font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Burhanuddin Irsyad</h1>
+        <p>Data Scientist | Data Engineer | Machine Learning Engineer</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/burhanuddin-irsyad" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:burhan.irsyaad@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/6285890023803" target="_blank" title="WhatsApp" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+            <a href="assets/CV.pdf" download title="Download CV"><i class="fas fa-file-arrow-down"></i></a>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section id="about" class="section">
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="assets/images/profile-placeholder.jpg" alt="Burhanuddin Irsyad" class="profile-photo">
+            <div class="about-text">
+                <p>Result-oriented and analytically driven Data Science student with hands-on experience in building clean ETL pipelines, analysis-ready datasets, and decision-support dashboards using Python, SQL, Power BI, and Tableau.</p>
+                <p>Proven ability to transform multi-source data into accurate, secure, and scalable workflows that support analytics, machine learning, and strategic business insights across public-sector, startup, and enterprise environments.</p>
+                <p>Strong in data validation, governance, and end-to-end analytical processes, with the capability to communicate insights effectively to both technical and non-technical stakeholders.</p>
+                <p>Equipped with a solid foundation in product development, business strategy, and cross-functional collaboration, and highly motivated to solve complex, real-world problems through data-driven approaches.</p>
+
+                <div class="about-meta">
+                    <span class="chip"><i class="fas fa-phone"></i> +62 858-9002-3803</span>
+                    <span class="chip"><i class="fas fa-envelope"></i> burhan.irsyaad@gmail.com</span>
+                    <span class="chip"><i class="fas fa-graduation-cap"></i> Brawijaya University</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <div class="container">
+        <h2>Experience Highlights</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <img src="assets/images/project-placeholder-1.jpg" alt="Pertamina (Persero) Preview">
+                <div class="project-card-content">
+                    <h3>Pertamina (Persero), Data Analyst Intern</h3>
+                    <p>Supported consolidated financial reporting and reconciliation by validating multi-entity datasets and transforming planning data into analysis-ready outputs.</p>
+                    <ul class="project-highlights">
+                        <li>Executed data validation, consistency checks, and exploratory analysis to improve analytical readiness.</li>
+                        <li>Performed cross-entity and cross-period analysis, including attribute classification and verification using internal and external references.</li>
+                        <li>Processed enterprise planning/reporting data (Anaplan) into structured outputs for management reporting.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/images/project-placeholder-2.jpg" alt="Badan Pusat Statistik (BPS) Preview">
+                <div class="project-card-content">
+                    <h3>Badan Pusat Statistik (BPS), Data Analyst and Surveyor</h3>
+                    <p>Managed end-to-end MSME data capture, validation, and platform integration to deliver accurate survey metadata and public-facing insights.</p>
+                    <ul class="project-highlights">
+                        <li>Collected field data for 100+ MSMEs via structured interviews and SW Maps geotagging to ensure spatially accurate profiles.</li>
+                        <li>Built and integrated a centralized MSME platform featuring a digital catalog, infographics/videographics, and an interactive dashboard.</li>
+                        <li>Validated records with field officers and officials to reduce duplication and align with Satu Data Indonesia standards.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/images/project-placeholder-3.jpg" alt="Monev Studio Global Preview">
+                <div class="project-card-content">
+                    <h3>Monev Studio Global, Data Engineer</h3>
+                    <p>Strengthened data extraction and quality controls for a large-scale housing program by developing scraping utilities and enforcing validation standards.</p>
+                    <ul class="project-highlights">
+                        <li>Developed Python web-scraping utilities to extract beneficiary records from the Lentera Hijau web application.</li>
+                        <li>Monitored data reliability for a 65,000-household survey across 12 provinces, supporting downstream verification.</li>
+                        <li>Designed validation rules, flagged inconsistencies, and streamlined data verification workflows for higher efficiency.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/images/project-placeholder-4.jpg" alt="Temu Dataku Preview">
+                <div class="project-card-content">
+                    <h3>Temu Dataku, Data Science Curriculum Development</h3>
+                    <p>Created project-based learning modules and materials that translated data science concepts into hands-on, measurable learning outcomes.</p>
+                    <ul class="project-highlights">
+                        <li>Designed and delivered curriculum tailored to client and learner needs across beginner to intermediate levels.</li>
+                        <li>Developed modules in Python, data analysis, machine learning, and visualization.</li>
+                        <li>Produced slide decks, hands-on exercises, and assessments for live and self-paced sessions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/images/project-placeholder-5.jpg" alt="Sinergi Inovasi Tekno Preview">
+                <div class="project-card-content">
+                    <h3>Sinergi Inovasi Tekno, Public Relations</h3>
+                    <p>Supported brand visibility and growth by building partnerships, coordinating event execution, and drafting strategic collaboration proposals.</p>
+                    <ul class="project-highlights">
+                        <li>Built relationships and negotiated partnerships with media partners to strengthen brand exposure.</li>
+                        <li>Supported event execution from initial planning through on-site implementation.</li>
+                        <li>Authored partnership proposals with external stakeholders to support business growth and visibility.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/images/project-placeholder-6.jpg" alt="Hidata Teknologi Digital Preview">
+                <div class="project-card-content">
+                    <h3>Hidata Teknologi Digital, Business Development</h3>
+                    <p>Enabled targeted outbound campaigns by preparing prospect datasets, supporting pipeline growth, and mapping needs to digital solutions.</p>
+                    <ul class="project-highlights">
+                        <li>Researched and compiled high-potential client datasets to expand a qualified sales pipeline.</li>
+                        <li>Engaged prospects to identify needs and mapped them to relevant digital solutions.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="section">
+    <div class="container">
+        <h2>Technical Skillset</h2>
+        <div class="skills-table">
+
+            <div class="skill-column">
+                <div class="skill-header">
+                    <i class="fas fa-brain"></i>
+                    <h3>Machine Learning and Statistics</h3>
+                </div>
+                <ul class="skill-list">
+                    <li>Predictive modeling, classification, clustering</li>
+                    <li>Model validation and evaluation</li>
+                    <li>Statistical analysis and experimentation</li>
+                    <li>TensorFlow, Keras, Scikit-learn</li>
+                </ul>
+            </div>
+
+            <div class="skill-column">
+                <div class="skill-header">
+                    <i class="fas fa-database"></i>
+                    <h3>Data Engineering and ETL</h3>
+                </div>
+                <ul class="skill-list">
+                    <li>ETL processes, data wrangling and cleaning</li>
+                    <li>Web scraping (Selenium, BeautifulSoup, Requests)</li>
+                    <li>Database management and schema design</li>
+                    <li>Data quality monitoring and validation rules</li>
+                </ul>
+            </div>
+
+            <div class="skill-column">
+                <div class="skill-header">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Analysis and Visualization</h3>
+                </div>
+                <ul class="skill-list">
+                    <li>EDA, business intelligence, dashboard development</li>
+                    <li>Data validation, customer segmentation</li>
+                    <li>Trend forecasting</li>
+                    <li>Power BI, Tableau, Matplotlib, Seaborn, Plotly</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="certifications" class="section">
+    <div class="container">
+        <h2>Certifications, Licenses and Courses</h2>
+        <p class="cert-note">Selected courses and certifications completed across data science, analytics, AI, data engineering, and climate risk.</p>
+
+        <div class="cert-wrapper">
+            <div class="cert-card">
+                <div class="cert-grid">
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Analyzing and Visualizing Data with Power BI</p>
+                                <div class="cert-org">Davidson College</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">December 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Artificial Intelligence in Government</p>
+                                <div class="cert-org">edX, University System of Maryland</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">December 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Data Science: Building Machine Learning Models</p>
+                                <div class="cert-org">HarvardX</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">December 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Analyzing Data with Excel</p>
+                                <div class="cert-org">IBM</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">December 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Macroeconomics for a Sustainable Planet</p>
+                                <div class="cert-org">SDG Academy</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">December 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Data Analytics and Databases on AWS</p>
+                                <div class="cert-org">Amazon Web Services (AWS)</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">November 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Computer Vision</p>
+                                <div class="cert-org">ICE, Brawijaya University</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">November 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Machine Learning Operation Implementation and Design</p>
+                                <div class="cert-org">ICE, University of Indonesia</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">November 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Database Technology and Programming</p>
+                                <div class="cert-org">ICE, Xuetang University</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">November 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Software Engineering</p>
+                                <div class="cert-org">ICE, Telkom University</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">November 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Data Classification and Summarization Using IBM Granite</p>
+                                <div class="cert-org">IBM</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">September 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Data Classification and Summarization</p>
+                                <div class="cert-org">IBM SkillsBuild x Hacktiv8</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">September 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Intermediate Level Data Science</p>
+                                <div class="cert-org">Digital Talent Scholarship (DTS), KOMDIGI</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">August 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Code Generations and Optimization</p>
+                                <div class="cert-org">IBM SkillsBuild x Hacktiv8</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">August 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Machine Learning</p>
+                                <div class="cert-org">IBM SkillsBuild x Hacktiv8</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">August 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">AI Engineer</p>
+                                <div class="cert-org">Digital Talent Scholarship (DTS)</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">June 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Climate Risk Decision Analysis (CRIDA)</p>
+                                <div class="cert-org">UNESCO</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">May 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Introduction to Climate Risk Informed Decision Analysis (CRIDA)</p>
+                                <div class="cert-org">UNESCO</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">May 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Developing and Maintaining Data Management System</p>
+                                <div class="cert-org">UNICEF x Agora</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">May 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Presenting Data Visually</p>
+                                <div class="cert-org">UNICEF x Agora</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">May 2025</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Integration of QGIS and Python in Geospatial Data Analysis (Advanced)</p>
+                                <div class="cert-org">Advanced Class</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">August 2024</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Data Science and Agile Systems for Product Management</p>
+                                <div class="cert-org">edX, University System of Maryland</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">May 2024</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">ASEAN Data Science Explorers</p>
+                                <div class="cert-org">ASEAN Foundation</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">April 2024</div>
+                    </div>
+
+                    <div class="cert-item">
+                        <div class="cert-left">
+                            <span class="cert-bullet"><i class="fas fa-certificate"></i></span>
+                            <div>
+                                <p class="cert-title">Data Science Class</p>
+                                <div class="cert-org">KT&amp;G SangSang University Indonesia</div>
+                            </div>
+                        </div>
+                        <div class="cert-date">August 2023</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="container">
+        <h2>Contact</h2>
+
+        <div class="contact-cards">
+            <div class="contact-card">
+                <div class="icon"><i class="fas fa-envelope"></i></div>
+                <h3>Email</h3>
+                <p>For collaboration, opportunities, or questions about my work, feel free to reach out by email.</p>
+                <a class="contact-btn" href="mailto:burhan.irsyaad@gmail.com">
+                    <i class="fas fa-paper-plane"></i> Send Email
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                <h3>WhatsApp</h3>
+                <p>If you prefer a faster response, you can message me directly via WhatsApp.</p>
+                <a class="contact-btn secondary" href="https://wa.me/6285890023803" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon"><i class="fab fa-linkedin"></i></div>
+                <h3>LinkedIn</h3>
+                <p>Connect with me professionally and view my background in more detail on LinkedIn.</p>
+                <a class="contact-btn secondary" href="https://www.linkedin.com/in/burhanuddin-irsyad" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i> View LinkedIn
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Burhanuddin Irsyad. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            window.scrollTo({
+                top: targetElement.offsetTop - 70,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
